@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receive - EeDhal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylesrest.css" />
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="nav_logo">EeDhal</a>
+
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a href="index.html" class="nav_link">Home</a>
+            <a href="receive.html" class="nav_link">Receive</a>
+            <a href="product.html" class="nav_link">Product</a>
+            <a href="service.html" class="nav_link">Services</a>
+            <a href="Contact.html" class="nav_link">Contact</a>
+          </li>
+        </ul>
+ 
+        <button class="button" id="profile">
+          <p id="demo" style="color: white;"></p>
+        </button>
+        <button class="button" id="logout" style="display: none;">
+          Logout
+        </button>
+        
+        <script>
+          // Check if 'Org_username' exists in localStorage
+          const username = localStorage.getItem('Org_username');
+          const demoElement = document.getElementById('demo');
+          const logoutButton = document.getElementById('logout');
+        
+          // Set the text based on the presence of 'Org_username'
+          if (username) {
+            demoElement.textContent = username; // Display the username
+            logoutButton.style.display = 'block'; // Show the logout button
+        
+            // Add event listener for logout button
+            logoutButton.addEventListener('click', () => {
+              localStorage.removeItem('Org_username'); // Clear the item
+              window.location.href = 'index1.html'; // Navigate to index.html
+            });
+          } else {
+            demoElement.textContent = 'Profile'; // Default text
+          }
+        </script>
+         
+      
+      </nav>
+    </header>
+
+    <section class="home">
+        <div class="content-box">
+          <h1>Need Food</h1>
+          <div class="grid">
+            <div class="grid-item">
+              <a href="request.html"><h2>Request for Food</h2></a>
+              <p>Set your Orphanage as Priority</p>
+            </div>
+            <div class="grid-item">
+              <a href="history.html"><h2>Previously Received Donations</h2></a>
+              <p>See History of Previous Donations to your Orphanage</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    <script src="script.js"></script>
+  </body>
+</html>
