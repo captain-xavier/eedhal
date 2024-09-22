@@ -1,4 +1,4 @@
-###EeDhal: Nourishing Lives Through Food Donation
+### EeDhal: Nourishing Lives Through Food Donation
 Connect with local communities to donate surplus food and combat hunger.
 Easily register and log in to manage your donations and track impact.
 Browse nearby food drives and volunteer opportunities to make a difference.
